@@ -1,0 +1,49 @@
+// WHAT IS THE SPREAD OPERATOR (...)?
+// >> AN OPERATOR USED TO EXPAND (OR "UNPACK") AN ITERABLE (LIKE AN ARRAY) INTO INDIVIDUAL ELEMENTS.
+// >> IT ALLOWS YOU TO EASILY COMBINE ARRAYS, COPY ARRAYS, OR PASS ARRAY ELEMENTS AS SEPARATE ARGUMENTS.
+
+// EXAMPLE OF COMBINING ARRAYS:
+const fruits = ['BANANA', 'ORANGE', 'APPLE', 'POMEGRANATE'];
+const vegetable = ['BITTER MELON', 'EGG PLANT', 'POTATO'];
+
+// CREATES A NEW ARRAY BY SPREADING THE CONTENTS OF BOTH
+const mixFoods = [...fruits, ...vegetable]; 
+console.log(mixFoods); 
+// OUTPUT: ['BANANA', 'ORANGE', 'APPLE', 'POMEGRANATE', 'BITTER MELON', 'EGG PLANT', 'POTATO']
+
+// EXAMPLE OF COPYING AN ARRAY (IMMUTABLE COPY):
+const original = [1, 2, 3];
+const copy = [...original]; // COPIES VALUES INSTEAD OF REFERENCING THE SAME ARRAY
+
+
+
+// 1. COPYING AN ARRAY (IMMUTABLE COPY)
+// IF YOU DO `LET NEWARRAY = OLDARRAY`, YOU ARE ONLY POINTING TO THE SAME ARRAY IN MEMORY.
+// USING SPREAD CREATES A BRAND NEW ARRAY, SO CHANGES WON'T AFFECT THE ORIGINAL.
+
+const original1 = [1, 2, 3];
+const copy1= [...original];
+
+copy.push(4);
+console.log(original); // [1, 2, 3] (STAYS UNCHANGED)
+console.log(copy);     // [1, 2, 3, 4]
+
+
+// 2. EXPANDING INTO FUNCTION ARGUMENTS
+// SOMETIMES A FUNCTION EXPECTS INDIVIDUAL ARGUMENTS, BUT YOU HAVE THEM IN AN ARRAY.
+
+function calculateSum(a, b, c) {
+    return a + b + c;
+}
+
+const numbers = [10, 20, 30];
+console.log(calculateSum(...numbers)); // THE SPREAD UNPACKS [10, 20, 30] INTO 10, 20, 30
+
+
+// 3. ADDING ELEMENTS TO AN ARRAY DYNAMICALLY
+// YOU CAN SPREAD AN EXISTING ARRAY AND ADD NEW ITEMS IN THE SAME LINE.
+
+const tasks = ['READ', 'WRITE'];
+const allTasks = ['SLEEP', ...tasks, 'CODE'];
+
+console.log(allTasks); // ['SLEEP', 'READ', 'WRITE', 'CODE']
