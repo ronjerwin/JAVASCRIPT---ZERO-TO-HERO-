@@ -1,0 +1,35 @@
+// WHAT IS A REST PARAMETER (...)?
+// >> AN OPERATOR USED TO COLLECT INDIVIDUAL ARGUMENTS INTO A SINGLE ARRAY.
+// >> IT ALLOWS A FUNCTION TO ACCEPT AN INDEFINITE NUMBER OF ARGUMENTS AS AN ARRAY.
+
+// KEY RULE: THE REST PARAMETER MUST ALWAYS BE THE LAST ARGUMENT IN A FUNCTION'S DEFINITION.
+
+// EXAMPLE:
+function greetings(greet, ...names) {
+    // 'greet' GETS THE FIRST ARGUMENT
+    // 'names' COLLECTS ALL REMAINING ARGUMENTS INTO AN ARRAY
+    console.log(`${greet}! The students are: ${names.join(', ')}`);
+}
+
+greetings('GOOD DAY', 'RJ', 'JAM', 'DK'); 
+// OUTPUT: "GOOD DAY! THE STUDENTS ARE: RJ, JAM, DK"
+
+
+
+// EXAMPLE: A FUNCTION THAT ADDS UP ANY AMOUNT OF NUMBERS
+// BY USING THE REST PARAMETER, WE CAN PASS 2, 5, OR EVEN 100 NUMBERS, 
+// AND THE FUNCTION WILL AUTOMATICALLY COLLECT THEM INTO AN ARRAY CALLED 'NUMS'.
+
+function sumAll(...nums) {
+    // SINCE 'nums' IS NOW AN ARRAY, WE CAN USE THE .REDUCE() METHOD
+    // TO CALCULATE THE TOTAL OF ALL COLLECTED NUMBERS.
+    let total = nums.reduce((accumulator, current) => accumulator + current, 0);
+    
+    console.log(`THE NUMBERS: ${nums.join(' + ')}`);
+    console.log(`THE TOTAL IS: ${total}`);
+}
+
+// YOU CAN CALL THIS FUNCTION WITH AS MANY ARGUMENTS AS YOU WANT!
+sumAll(10, 20);           // OUTPUT: 30
+sumAll(5, 10, 15, 20);    // OUTPUT: 50
+sumAll(1, 2, 3, 4, 5, 6); // OUTPUT: 21
