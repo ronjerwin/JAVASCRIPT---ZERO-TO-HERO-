@@ -7,28 +7,34 @@
 
 // EXAMPLE:
 
+// 1. SUMMATION (STARTING AT 0)
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
 // NOTE: IN THE EXAMPLE THE FIRST VALUE OF THE ACCUMULATOR IS 0, AND THE CURRENTVALUE IS 1. AFTER THE RETURN 1 WILL BE THE VALUE OF THE ACCUMULATOR AND THE NEXT VALUE OF THE CURRENTVALUE WILL BE 2, THEN ADDS THE 2 IN THE ACCUMULATOR THAT HAS A VALUE OF 1, SO THE VALUE OF ACCUMULATOR WILL BE 3. NOW THE VABLUE OF CURRENT VALUE IS 3. AND SO ON...
 
-const newNumber = numbers.reduce((accumulator, currentValue) => {
-  return accumulator, currentValue = accumulator + currentValue + 0;
-})
 
-console.log(newNumber)
+// WE USE 0 AS THE INITIAL VALUE BECAUSE WE ARE DOING ADDITION
+const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0); 
 
+console.log(sum); // 36
+
+
+// 2. FINDING MAX OR MIN (NO INITIAL VALUE NEEDED)
 const grades = [90, 94, 87, 85, 92];
 
-const highestGrade = grades.reduce((accumulator, currentValue) => {
-  return Math.max(accumulator, currentValue);
-})
-
-console.log(highestGrade);
-
-const lowestGrade = grades.reduce((accumulator, currentValue) => {
-  return Math.min(accumulator, currentValue);
-})
-
-console.log(lowestGrade);
+// WHEN NO INITIAL VALUE IS PROVIDED, THE ACCUMULATOR STARTS WITH THE FIRST ELEMENT (90)
+const highestGrade = grades.reduce((acc, curr) => Math.max(acc, curr));
+console.log(highestGrade); // 94
 
 
+// 3. CONCATENATION (STARTING WITH A STRING)
+const texts = ['RJ', 'WEB', 'DEVELOPER'];
+
+// WE USE 'HELLO: ' AS THE INITIAL VALUE BECAUSE WE ARE BUILDING A STRING
+const greeting = texts.reduce((acc, curr) => {
+    return acc + curr + " ";
+}, 'HELLO: '); 
+
+console.log(greeting); // "HELLO: RJ WEB DEVELOPER "
