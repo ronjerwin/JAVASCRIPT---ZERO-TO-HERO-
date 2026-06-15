@@ -26,3 +26,9 @@ function formatDates(element) {
     const part = element.split('-');
     return `${part[1]}-${part[2]}-${part[0]}`;
 }
+
+// SAME OUTPUT LIKE THE FORMATDATES FUNCTION.
+const formatted = dates.map((element) => {
+    const part = element.split('-');
+    return `${part[1]}-${part[2]}-${part[0]}`;
+})
