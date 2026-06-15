@@ -1,0 +1,23 @@
+// WHAT IS A FUNCTION?
+// >> A REUSABLE BLOCK OF CODE DESIGNED TO PERFORM A SPECIFIC TASK.
+// >> FUNCTIONS REDUCE CODE DUPLICATION (DRY PRINCIPLE: DON'T REPEAT YOURSELF) AND IMPROVE MAINTAINABILITY.
+
+// BASIC SYNTAX:
+// function functionName(parameters) { ... code to execute ... }
+
+// 1. SIMPLE FUNCTION:
+function greet() {
+    console.log('HELLO!');
+}
+greet(); // INVOKING: THE ACT OF CALLING THE FUNCTION TO EXECUTE ITS CODE.
+
+// 2. PARAMETERIZED FUNCTION:
+// 'name' IS A PARAMETER (A PLACEHOLDER FOR THE DATA YOU WILL PASS IN).
+function greetUser(name) {
+    console.log('HELLO ' + name);
+}
+
+// 'RJ!', 'LORENCE', AND 'JAM!' ARE ARGUMENTS (THE ACTUAL VALUES YOU PASS INTO THE FUNCTION).
+greetUser('RJ!');
+greetUser('LORENCE');
+greetUser('JAM!');
