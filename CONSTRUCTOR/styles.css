@@ -1,0 +1,19 @@
+#constructorContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.card-container {
+  border: 1px solid gray;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 1s;
+}
+
+.card-container:hover {
+  transform: rotateY(180deg);
+}
