@@ -5,11 +5,16 @@
 // EXAMPLE:
 
 
-// THE PARENT CLASS HOLDS SHARED PROPERTIES THAT ALL ANIMALS HAVE
+// THE PARENT CLASS HOLDS SHARED PROPERTIES AND METHODS THAT ALL ANIMALS HAVE
 class Animal {
   constructor(name, age) {
     this.name = name;
     this.age = age;
+  }
+
+  // THIS METHOD IS SHARED BY ALL SUBCLASSES
+  move(speed) {
+    console.log(`The ${this.name} is moving at a speed of ${speed}kph.`);
   }
 }
 
@@ -17,27 +22,44 @@ class Animal {
 class Fish extends Animal {
   constructor(name, age, swimSpeed) {
     // 'SUPER' CALLS THE CONSTRUCTOR OF THE PARENT CLASS (ANIMAL)
-    // THIS INITIALIZES 'NAME' AND 'AGE' USING THE PARENT'S LOGIC
     super(name, age); 
     
-    // NOW WE ADD THE PROPERTY UNIQUE ONLY TO FISH
+    // INITIALIZE PROPERTY UNIQUE TO FISH
     this.swimSpeed = swimSpeed;
+  }
+
+  swim() {
+    console.log(`The ${this.name} is swimming`);
+    // 'SUPER' INVOKES THE PARENT'S 'MOVE' METHOD, REUSING ITS LOGIC
+    super.move(this.swimSpeed);
   }
 }
 
 class Hawk extends Animal {
   constructor(name, age, flySpeed) {
-    // WE MUST CALL SUPER() BEFORE ACCESSING 'THIS'
+    // PASS DATA UP TO THE PARENT CONSTRUCTOR
     super(name, age);
     this.flySpeed = flySpeed;
+  }
+
+  fly() {
+    console.log(`The ${this.name} is flying`);
+    // REUSING PARENT METHOD LOGIC VIA 'SUPER'
+    super.move(this.flySpeed);
   }
 }
 
 class Rabbit extends Animal {
   constructor(name, age, runSpeed) {
-    // REUSING THE PARENT CONSTRUCTOR SAVES US FROM RE-WRITING NAME/AGE ASSIGNMENTS
+    // REUSING PARENT CONSTRUCTOR FOR INITIALIZATION
     super(name, age);
     this.runSpeed = runSpeed;
+  }
+
+  run() {
+    console.log(`The ${this.name} is running`);
+    // REUSING PARENT METHOD LOGIC VIA 'SUPER'
+    super.move(this.runSpeed);
   }
 }
 
@@ -46,4 +68,8 @@ const fish = new Fish('fish', 1, 15);
 const hawk = new Hawk('hawk', 2, 50);
 const rabbit = new Rabbit('rabbit', 3, 35);
 
+// DEMONSTRATING BOTH CONSTRUCTOR AND METHOD INHERITANCE
 console.log(fish);
+hawk.fly();
+fish.swim();
+rabbit.run();
