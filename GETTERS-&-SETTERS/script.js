@@ -74,6 +74,10 @@ class Login {
     this.password = password;
   }
 
+  get sayHello() {
+    console.log(`Hello, ${this.username}!`);
+  }
+
   // SETTER: ENSURES USERNAME IS A STRING AND MEETS MINIMUM LENGTH REQUIREMENTS
   set username(newUserName) {
     if(typeof newUserName === 'string' && newUserName.length >= 8) {
@@ -111,9 +115,13 @@ PASSWORD: ${this._password}`;
 }
 
 // CREATING AN INSTANCE
-const user1 = new Login("asdasdds", "12312sasd3231");
+const user1 = new Login("Spongebob", "spongebob123456");
 
 // ACCESSING DATA THROUGH GETTERS
 console.log(user1.username);
 console.log(user1.password);
 console.log(user1.credentials);
+
+console.log(user1.sayHello)
+
+
