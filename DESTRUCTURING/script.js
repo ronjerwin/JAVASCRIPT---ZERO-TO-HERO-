@@ -47,3 +47,4 @@ stateAddress(address);
 function stateAddress({ street, barangay, city, province="unknown" } = {}) { 
   console.log(`${street}, ${barangay}, ${city}, ${province}.`);
 }
+
