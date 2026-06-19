@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>USER LOGIN</title>
+</head>
+<body>
+
+  <div class="register-section">
+    <p class="register-header">Register</p>
+      <form class="register-form">
+        <label for="myUsername">Username:</label>
+        <input size="30" id="myUsername" type="text" autocomplete="username" placeholder="Username">
+        <label for="myPassword">Password:</label>
+        <input size="30" id="myPassword" type="password" autocomplete="current-password" placeholder="Password">
+        <button onclick="handleRegistration()" type="button">Submit</button>
+      </form>
+    <p id="result"></p>
+  </div>
+
+
+    <div class="login-section">
+    <p class="login-header">Login</p>
+      <form class="login-form">
+        <label for="loginUsername">Username:</label>
+        <input size="30" id="loginUsername" type="text" autocomplete="username" placeholder="Username">
+        <label for="loginPassword">Password:</label>
+        <input size="30" id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
+        <button onclick="handleLogin()" type="button">Submit</button>
+      </form>
+    <p id="resultLogin"></p>
+  </div>
+
+  <div id="welcomeSection">
+    
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
