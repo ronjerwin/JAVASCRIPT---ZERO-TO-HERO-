@@ -1,0 +1,35 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p {
+  font-size: 40px;
+}
+
+button {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.14s, transform 0.14s;
+}
+
+button:hover {
+  opacity: 80%;
+}
+
+button:active {
+  transform: scale(90%);
+  opacity: 100%;
+}
+
+button:focus {
+  outline: none;
+}
