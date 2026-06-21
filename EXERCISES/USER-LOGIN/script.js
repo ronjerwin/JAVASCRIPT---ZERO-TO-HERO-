@@ -1,6 +1,5 @@
 
 
-
   let registeredUsername;
   let registeredPassword;
 
