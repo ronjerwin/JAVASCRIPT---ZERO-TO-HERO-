@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  font-family: monospace;
+}
+
+body {
+  background-image: url(nyc-bg.png);
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.clock-container p {
+  background-color: rgba(128, 128, 128, 0.1); 
+  backdrop-filter: blur(10px);
+  font-size: 8em;
+  text-align: center;
+  padding: 20px 0px;
+  color: white;
+  width: 100%;
+  font-weight: 700;
+}
