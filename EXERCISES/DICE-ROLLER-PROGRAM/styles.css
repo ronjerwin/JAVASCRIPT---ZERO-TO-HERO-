@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.images {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+h1 {
+  text-align: center;
+}
+
+.rollNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 40px;
+}
+
+.rollNumber button {
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.incrementBtn {
+  background-color: rgb(20, 194, 20);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.incrementBtn:hover {
+  background-color: rgb(49, 241, 49);
+}
+
+.decrementBtn {
+  background-color: rgb(211, 3, 3);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.decrementBtn:hover {
+  background-color: rgb(255, 22, 22);
+}
+
+#rollBtn {
+  background-color: blue;
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+#rollBtn:hover {
+  background-color: rgb(49, 49, 255);
+  cursor: pointer;
+}
+
+#rollBtn:active {
+  background-color: rgb(2, 2, 189);
+}
