@@ -1,0 +1,14 @@
+
+body {
+  margin: 0;
+}
+
+#container {
+  font-size: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  position: absolute;
+  transition: top 0.1s, left 0.1s;
+}
