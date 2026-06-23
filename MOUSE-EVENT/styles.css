@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#emoteContainer p {
+  margin: 0;
+}
+
+#emoteContainer {
+  height: 5em;
+  width: 5em;
+  background-color: yellow;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+
