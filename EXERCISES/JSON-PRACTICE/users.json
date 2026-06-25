@@ -1,0 +1,9 @@
+[
+  {"id": 1, "name": "Juan Dela Cruz", "role": "Developer"},
+  {"id": 2, "name": "Maria Clara", "role": "Designer"},
+  {"id": 3, "name": "Jose Rizal", "role": "Writer"},
+  {"id": 4, "name": "Andres Bonifacio", "role": "Leader"},
+  {"id": 5, "name": "Apolinario Mabini", "role": "Strategist"},
+  {"id": 6, "name": "Gabriela Silang", "role": "Leader"},
+  {"id": 7, "name": "Antonio Luna", "role": "General"}
+]

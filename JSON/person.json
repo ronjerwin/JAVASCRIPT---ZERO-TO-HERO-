@@ -1,0 +1,25 @@
+[{
+  "name": "spongebob",
+  "age": 30,
+  "isEmployed": true
+},
+{
+  "name": "patrick",
+  "age": 33,
+  "isEmployed": true
+},
+{
+  "name": "squidward",
+  "age": 45,
+  "isEmployed": true
+},
+{
+  "name": "sandy",
+  "age": 24,
+  "isEmployed": true
+},
+{
+  "name": "mr.crabs",
+  "age": 50,
+  "isEmployed": true
+}]
