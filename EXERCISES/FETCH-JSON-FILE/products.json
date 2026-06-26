@@ -1,0 +1,49 @@
+{
+  "tech_products": [
+    {
+      "id": 1,
+      "name": "Zenith Pro Smartphone",
+      "category": "Mobile",
+      "brand": "TechNova",
+      "price": 999.99,
+      "features": ["120Hz OLED Display", "200MP Camera", "AI Processor"],
+      "stock": 46
+    },
+    {
+      "id": 2,
+      "name": "Nebula Wireless Headphones",
+      "category": "Audio",
+      "brand": "SonicFlow",
+      "price": 249.50,
+      "features": ["Active Noise Cancellation", "50hr Battery Life", "Spatial Audio"],
+      "stock": 120
+    },
+    {
+      "id": 3,
+      "name": "Apex Slim Laptop",
+      "category": "Computing",
+      "brand": "ComputeX",
+      "price": 1299.00,
+      "features": ["M3 Chip", "16GB RAM", "512GB SSD", "14-inch Retina Display"],
+      "stock": 15
+    },
+    {
+      "id": 4,
+      "name": "SmartHome Hub Gen 2",
+      "category": "IoT",
+      "brand": "Connecta",
+      "price": 129.00,
+      "features": ["Voice Control", "Matter Support", "Zigbee Gateway"],
+      "stock": 88
+    },
+    {
+      "id": 5,
+      "name": "Quantum Precision Mouse",
+      "category": "Accessories",
+      "brand": "GearMaster",
+      "price": 89.99,
+      "features": ["Ergonomic Design", "Programmable Buttons", "Wireless"],
+      "stock": 250
+    }
+  ]
+}
