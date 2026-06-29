@@ -32,3 +32,33 @@ const formatted = dates.map((element) => {
     const part = element.split('-');
     return `${part[1]}-${part[2]}-${part[0]}`;
 })
+
+
+
+
+const studentNames = [
+  "Alice Johnson",
+  "Bob Smith",
+  "Charlie Davis",
+  "Diana Prince",
+  "Ethan Hunt",
+  "Fiona Gallagher",
+  "George Miller",
+  "Hannah Abbott",
+  "Ian Wright",
+  "Julia Roberts"
+];
+
+// forEach Method
+
+// studentNames.forEach((name) => {
+//     console.log(name.toLowerCase());
+// })
+
+// map Method
+
+const upperCasedNames = studentNames.map((name) => {
+    return name.toUpperCase();
+})
+
+console.log(upperCasedNames);
