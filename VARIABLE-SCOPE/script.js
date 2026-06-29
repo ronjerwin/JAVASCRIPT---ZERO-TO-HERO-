@@ -25,3 +25,6 @@ function multiply(num1, num2) {
 
 multiply(5, 5); // OUTPUTS 25
 console.log(result); // OUTPUTS 100 (THE GLOBAL VARIABLE REMAINS UNCHANGED)
+
+
+

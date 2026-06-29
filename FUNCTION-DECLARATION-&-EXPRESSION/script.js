@@ -38,3 +38,36 @@ const total = numbers.reduce(function(accumulator, currentValue) {
   return accumulator + currentValue;
 }, 0);
 console.log(total);
+
+
+
+greetUser1();
+
+function greetUser1(username = 'Guest') {
+  console.log(`Welcome back, ${username}!`);
+}
+
+const greetUser2 = (username = 'Guest') => {
+  console.log(`Welcome back, ${username}!`);
+}
+
+greetUser2('Spongebob');
+
+
+const username = document.getElementById('username');
+const handleSubmit = document.getElementById('handleSubmit');
+const result = document.getElementById('result');
+
+handleSubmit.addEventListener('click', function() {
+  try {
+    if(username.value === "") {
+      throw new Error('Username cannot be an empty string!');
+    }else {
+      result.textContent = `Hello, ${username.value}!`;
+      username.value = '';
+    }
+  }
+  catch(error) {
+    console.error(error);
+  }
+})
