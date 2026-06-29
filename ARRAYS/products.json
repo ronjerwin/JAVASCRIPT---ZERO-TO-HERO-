@@ -1,0 +1,52 @@
+{
+ "products": [
+    {
+        "id": 1,
+        "name": "Wireless Mouse",
+        "price": 29.99,
+        "inStock": true,
+        "categories": [
+            "Electronics",
+            "Accessories"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Mechanical Keyboard",
+        "price": 89.5,
+        "inStock": false,
+        "categories": [
+            "Electronics",
+            "Gaming"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Coffee Mug",
+        "price": 12.0,
+        "inStock": true,
+        "categories": [
+            "Kitchenware"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "USB-C Cable",
+        "price": 15.5,
+        "inStock": true,
+        "categories": [
+            "Electronics",
+            "Cables"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Notebook",
+        "price": 5.99,
+        "inStock": true,
+        "categories": [
+            "Stationery"
+        ]
+    }
+]
+}

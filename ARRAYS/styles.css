@@ -1,0 +1,16 @@
+body {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 10px;
+}
+
+.newElementContainer {
+  border: 1px solid;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  
+}
