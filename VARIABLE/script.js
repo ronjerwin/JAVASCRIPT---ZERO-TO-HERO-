@@ -24,3 +24,16 @@
 
   const greet2 = 'Hello, User!'; // VARIABLE DECLARATION USING CONST.
 //                                  IF YOU USED CONST, YOU CANNOT REASSIGN A VALUE OF YOUR VARIABLE.
+
+
+
+// if you want the value to be reassign use: let keyword.
+let balance = 150;
+balance = 100;
+console.log(balance); // 100
+
+// if you want a fixed value, it cannot be reassign or redeclared.
+let PI = 3.14159;
+PI = 4.52343;
+console.log(PI);
+
