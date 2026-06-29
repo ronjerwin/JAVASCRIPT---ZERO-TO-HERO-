@@ -48,3 +48,42 @@ function stateAddress({ street, barangay, city, province="unknown" } = {}) {
   console.log(`${street}, ${barangay}, ${city}, ${province}.`);
 }
 
+
+
+const arrays = ['Spongebob', 'Squarepants', '35', 'Conch Street'];
+
+function stateInfo([ firstname, lastname, age, street ] = []) {
+  console.log(`My name is ${firstname} ${lastname}.`);
+  console.log(`My age is ${age}.`);
+  console.log(`I'm from ${street}.`);
+}
+
+stateInfo(arrays);
+
+
+
+const products = {
+  name: "Mechanical Keyboard",
+  price: 89.50,
+  inStock: true,
+  categories: ["Electronics", "Gaming"]
+}
+
+function stateProductInfo({ name, price, categories } = {}) {
+  console.log(`Product Name: ${name}`);
+  console.log(`Price: ${price}`);
+  console.log(`Categories: ${categories.join(', ')}`);
+}
+
+stateProductInfo(products);
+
+const arrays2 = ['Spongebob', 'Squarepants', '35', 'Conch Street'];
+const [...elements] = arrays2;
+
+console.log(elements);
+
+const arrays3 = ['Spongebob', 'Squarepants', '35', 'Conch Street'];
+
+   [arrays3[0], arrays3[2]] = [arrays3[2], arrays3[0]];
+
+   console.log(arrays3)
