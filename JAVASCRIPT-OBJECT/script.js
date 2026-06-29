@@ -28,3 +28,22 @@ person1.job = 'Developer';
 
 // >> UPDATING AN EXISTING PROPERTY
 person1.age = 31;
+
+
+
+
+
+
+const product = {
+  id: 1,
+  name: "Wireless Mouse",
+  price: 29.99,
+  inStock: true,
+  categories: ["Electronics", "Accessories"],
+  marketProduct: function() {console.log(`${this.name} for only ${this.price}. Buy Now!`)} 
+}
+
+product.marketProduct();
+
+
+
