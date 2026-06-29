@@ -1,0 +1,44 @@
+{
+"products": [
+    {
+        "id": "p001",
+        "name": "Wireless Mouse",
+        "price": 29.99,
+        "currency": "USD",
+        "category": "Electronics",
+        "inventory": 50
+    },
+    {
+        "id": "p002",
+        "name": "Mechanical Keyboard",
+        "price": 89.50,
+        "currency": "USD",
+        "category": "Electronics",
+        "inventory": 20
+    },
+    {
+        "id": "p003",
+        "name": "USB-C Hub",
+        "price": 45.00,
+        "currency": "USD",
+        "category": "Accessories",
+        "inventory": 100
+    },
+    {
+        "id": "p004",
+        "name": "Laptop Stand",
+        "price": 35.00,
+        "currency": "USD",
+        "category": "Furniture",
+        "inventory": 30
+    },
+    {
+        "id": "p005",
+        "name": "Noise Cancelling Headphones",
+        "price": 199.99,
+        "currency": "USD",
+        "category": "Electronics",
+        "inventory": 15
+    }
+  ]
+}

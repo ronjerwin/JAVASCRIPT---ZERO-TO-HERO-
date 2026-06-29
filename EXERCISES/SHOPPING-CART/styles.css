@@ -1,0 +1,19 @@
+#productContainer {
+  display: grid;
+  grid-template-columns: 350px 350px;
+  gap: 10px;
+}
+
+.productDesc {
+  border: 1px solid;
+  width: 300px;
+}
+
+.cartButton {
+  background-color: rgb(0, 174, 255);
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
