@@ -12,9 +12,23 @@ function renderCart() {
     item.innerHTML = `
       <p>${product.name}</p>
       <p>₱${product.price}</p>
-      <p>Quantity: ${product.quantity}</p>
+      <div>
+       Quantity: <button class="incrementProductQuantity">+</button> ${product.quantity} <button class="decrementProductQuantity">-</button>
+      </div>
       <button class='deleteButton'>delete</button>
     `;
+
+    item.querySelector('.incrementProductQuantity').addEventListener('click', () => {
+      product.quantity += 1;
+      renderCart();
+    });
+
+    item.querySelector('.decrementProductQuantity').addEventListener('click', () => {
+      if (product.quantity > 1) {
+        product.quantity -= 1;
+        renderCart();
+      }
+    });
 
     item.querySelector('.deleteButton').addEventListener('click', () => {
       cart.splice(index, 1)
