@@ -2,20 +2,35 @@ const productContainer = document.getElementById('productContainer');
 const cartContainer = document.getElementById('cartContainer');
 const cart = [];
 
+
 function renderCart() {
   cartContainer.innerHTML = "";
 
-  cart.forEach((product) => {
-    const item = document.createElement("div");
+  cart.forEach((product, index) => {
+    let item = document.createElement("div");
 
     item.innerHTML = `
       <p>${product.name}</p>
       <p>₱${product.price}</p>
+      <p>Quantity: ${product.quantity}</p>
+      <button class='deleteButton'>delete</button>
     `;
+
+    item.querySelector('.deleteButton').addEventListener('click', () => {
+      cart.splice(index, 1)
+      console.log('Cart updated:', cart);
+      renderCart();
+    })
 
     cartContainer.appendChild(item);
   });
+
+  let total = cart.reduce((acc, product) => acc + (product.price * product.quantity), 0);
+  const totalCost = document.createElement('p'); 
+  totalCost.textContent = `Total Cost: ₱${total.toFixed(2)}`;
+  cartContainer.appendChild(totalCost);
 }
+
 
 function renderProducts(data) {
       data.products.forEach((product) => {
@@ -29,7 +44,12 @@ function renderProducts(data) {
 
 
       card.querySelector('.cartButton').addEventListener('click', () => {
-        cart.push(product);
+       const existingProduct = cart.find(item => item.id === product.id);
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push(product);
+        }
         console.log('Cart updated:', cart);
         renderCart();
       })
