@@ -19,15 +19,23 @@ function renderCart() {
     `;
 
     item.querySelector('.incrementProductQuantity').addEventListener('click', () => {
+      if(product.quantity >= product.inventory) {
+        alert(`Cannot add more than ${product.inventory} items of ${product.name}.`);
+        return;
+      }
       product.quantity += 1;
       renderCart();
     });
 
     item.querySelector('.decrementProductQuantity').addEventListener('click', () => {
-      if (product.quantity > 1) {
+
+      if(product.quantity === 1) {
+        cart.splice(index, 1);
+        renderCart();
+      } 
         product.quantity -= 1;
         renderCart();
-      }
+      
     });
 
     item.querySelector('.deleteButton').addEventListener('click', () => {
